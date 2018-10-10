@@ -1,5 +1,7 @@
 package aavdeev.recyclerviewtask;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -45,12 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.add_text:
-                MockGenerator.generate(1);
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.container, RecyclerFragment.newInstance())
-                        .commit();
 
-                Toast.makeText(this, "Add text", Toast.LENGTH_LONG).show();
+                 Toast.makeText(this, "Add Number", Toast.LENGTH_LONG).show();
                 break;
             case R.id.add_image:
                 Toast.makeText(this, "Add image", Toast.LENGTH_LONG).show();
