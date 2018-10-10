@@ -1,5 +1,7 @@
 package aavdeev.recyclerviewtask.mock;
 
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,6 +9,7 @@ import java.util.UUID;
 
 
 public class MockGenerator {
+
 
     public static List<Mock> generate(int count) {
         List<Mock> mocks = new ArrayList<>(count);
@@ -18,4 +21,8 @@ public class MockGenerator {
 
         return mocks;
     }
+
+
+
+
 }

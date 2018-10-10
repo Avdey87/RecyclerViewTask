@@ -8,13 +8,19 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import aavdeev.recyclerviewtask.mock.Mock;
+import aavdeev.recyclerviewtask.mock.MockAdapter;
+import aavdeev.recyclerviewtask.mock.MockGenerator;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         if (savedInstanceState == null) {
@@ -36,8 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.add_text:
+                MockGenerator.generate(1);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container, RecyclerFragment.newInstance())
+                        .commit();
+
                 Toast.makeText(this, "Add text", Toast.LENGTH_LONG).show();
                 break;
             case R.id.add_image:

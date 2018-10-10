@@ -39,5 +39,6 @@ public class MockAdapter extends RecyclerView.Adapter<MockHolder> {
         notifyDataSetChanged();
     }
 
-
+    public void addText(List<Mock> number) {
+    }
 }
