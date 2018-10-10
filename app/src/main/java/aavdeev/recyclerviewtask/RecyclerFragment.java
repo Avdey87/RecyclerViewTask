@@ -39,7 +39,7 @@ public class RecyclerFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         recycler.setAdapter(mockAdapter);
-        mockAdapter.addData(MockGenerator.generate(2));
+        mockAdapter.addData(MockGenerator.generate(1));
 
     }
 
