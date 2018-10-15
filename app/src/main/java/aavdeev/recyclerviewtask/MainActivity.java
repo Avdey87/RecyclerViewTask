@@ -1,21 +1,11 @@
 package aavdeev.recyclerviewtask;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
-import android.widget.Toolbar;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import aavdeev.recyclerviewtask.mock.Mock;
-import aavdeev.recyclerviewtask.mock.MockAdapter;
-import aavdeev.recyclerviewtask.mock.MockGenerator;
 
 public class MainActivity extends AppCompatActivity {
 

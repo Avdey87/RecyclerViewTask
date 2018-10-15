@@ -19,4 +19,12 @@ public class ImageMockHolder  extends RecyclerView.ViewHolder {
     public void bind(ImageMock image) {
         imageView.setImageBitmap(image.getImage());
     }
+
+    public ImageView getImageView() {
+        return imageView;
+    }
+
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
+    }
 }

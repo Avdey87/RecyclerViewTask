@@ -9,13 +9,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import aavdeev.recyclerviewtask.mock.MockAdapter;
+import java.util.ArrayList;
+
+import aavdeev.recyclerviewtask.mock.Adapter;
+import aavdeev.recyclerviewtask.mock.ImageMock;
+import aavdeev.recyclerviewtask.mock.Mock;
 import aavdeev.recyclerviewtask.mock.MockGenerator;
 
 public class RecyclerFragment extends Fragment {
 
     private RecyclerView recycler;
-    private final MockAdapter mockAdapter = new MockAdapter();
+
+
+    private ArrayList<Object> getSampleArrayList() {
+        ArrayList<Object> items = new ArrayList<>();
+        items.add(new Mock("One", 1));
+        items.add(new Mock("Two", 2));
+        items.add(new Mock("Three", 3));
+        items.add(R.drawable.diablo);
+
+        return items;
+    }
 
     public static RecyclerFragment newInstance() {
         return new RecyclerFragment();
@@ -36,8 +50,7 @@ public class RecyclerFragment extends Fragment {
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recycler.setAdapter(mockAdapter);
-        mockAdapter.addData(MockGenerator.generate(1));
+        recycler.setAdapter(new Adapter(getSampleArrayList()));
 
     }
 
